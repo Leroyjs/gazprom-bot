@@ -21,7 +21,11 @@ const messages = {
   allAboutGTE: () => "Все о ГТЕ",
   possibilities: () => "Возможности",
   useful: () => "Полезно",
+  science: () => "Наука",
+  sport: () => "Спорт",
+  creation: () => "Творчество",
   eventsSchedule: () => "График мероприятий",
+  contacts: () => "Контактные данные",
   faq: () => "Вопрос ответ",
   idea: () => "Есть идея или вопрос",
 };

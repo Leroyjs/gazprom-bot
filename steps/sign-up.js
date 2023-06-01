@@ -46,7 +46,7 @@ const ageStep = async (msg) => {
   const age = msg.text;
 
   if (isCorrectAge(age)) {
-    users[msg.chat.id].hobbies = msg.text;
+    users[msg.chat.id].age = msg.text;
     steps[msg.chat.id] = "main";
 
     if (age <= 35) {

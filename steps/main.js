@@ -48,11 +48,11 @@ const creationStep = async (msg) => {
 };
 
 const main_1 = async (msg) => {
-  await bot.sendMessage(msg.message.chat.id, "TODO");
+  await bot.sendMessage(msg.message.chat.id, "TODO, Соня жду тебя");
 };
 
 const main_2 = async (msg) => {
-  await bot.sendMessage(msg.message.chat.id, "TODO");
+  await bot.sendMessage(msg.message.chat.id, "TODO, Соня жду тебя");
 };
 
 const main_3 = async (msg) => {
@@ -63,11 +63,14 @@ const main_3 = async (msg) => {
 };
 
 const yourStart_1 = async (msg) => {
-  await bot.sendMessage(msg.message.chat.id, "TODO");
+  await bot.sendDocument(msg.message.chat.id, "./media/oneStart.jpg");
 };
 
 const yourStart_2 = async (msg) => {
-  await bot.sendMessage(msg.message.chat.id, "TODO");
+  await bot.sendMessage(
+    msg.message.chat.id,
+    "🔹Заполни на корпоративном портале Общества «Анкету для дистанционного обучения в СНФПО-онлайн» в разделе «Филиалы — Учебно-производственный центр — Анкеты — Анкета для дистанционного обучения в СНФПО-онлайн»\n\n🔸Обрати внимание, что на указанную в анкете электронную почту будет направлено письмо с ссылкой для завершения регистрации на платформе.\n\n🔹После завершения регистрации для тебя откроется доступ в личный кабинет обучающегося и к учебным материалам адаптационного курса.\n\n🔸Скачивай приложение на телефон и развивайся\nhttps://sdo.snfpo.ru/go/index.html"
+  );
 };
 
 const allAboutGTE_1 = async (msg) => {
@@ -91,37 +94,68 @@ const allAboutGTE_5 = async (msg) => {
 };
 
 const useful_1 = async (msg) => {
-  await bot.sendMessage(msg.message.chat.id, "TODO");
+  await bot.sendMessage(
+    msg.message.chat.id,
+    "🔹Новости СМУС - @smusgte\n\n🔸Главные новости ГТЕ - @gazpromtransgazekaterinburg\n\n🔹 Все что происходит в ГТЕ с профсоюзом - @gte_oppo\n\n🔸Творческие инициативы ПАО «Газпром» - @gazpromfakel\n\n🔹Официальный канал ПАО «Газпром» - @gazprom\n\n🔸Ведущий канал про нефтегазовую отрасль - @papagaz\n\n🔹Приложение ГИД объединяет работник по всей России -  https://apps.apple.com/ru/app/%D0%B3%D0%B8%D0%B4/id1596056366"
+  );
   await bot.sendDocument(msg.message.chat.id, "./media/socialLinks.pdf");
 };
 
-const useful_2 = async (msg) => {};
+const useful_2 = async (msg) => {
+  await bot.sendDocument(msg.message.chat.id, "./media/kolD.pdf");
+};
 
-const contacts_1 = async (msg) => {};
+const contacts_1 = async (msg) => {
+  await bot.sendDocument(msg.message.chat.id, "./media/conactSMUS.pdf");
+};
 
-const contacts_2 = async (msg) => {};
+const contacts_2 = async (msg) => {
+  await bot.sendDocument(msg.message.chat.id, "./media/conactMKF.pdf");
+};
 
-const science_1 = async (msg) => {};
+const science_1 = async (msg) => {
+  await bot.sendDocument(msg.message.chat.id, "./media/NTK.pdf");
+};
 
-const science_2 = async (msg) => {};
+const science_2 = async (msg) => {
+  await bot.sendDocument(msg.message.chat.id, "./media/innovation.pdf");
+};
 
-const science_3 = async (msg) => {};
+const science_3 = async (msg) => {
+  await bot.sendDocument(msg.message.chat.id, "./media/infest.pdf");
+};
 
-const science_4 = async (msg) => {};
+const science_4 = async (msg) => {
+  await bot.sendDocument(msg.message.chat.id, "./media/SPRMS.pdf");
+};
 
-const science_5 = async (msg) => {};
+const science_5 = async (msg) => {
+  await bot.sendDocument(msg.message.chat.id, "./media/SRK.pdf");
+};
 
-const science_6 = async (msg) => {};
+const science_6 = async (msg) => {
+  await bot.sendDocument(msg.message.chat.id, "./media/LMR.pdf");
+};
 
-const sport_1 = async (msg) => {};
+const sport_1 = async (msg) => {
+  await bot.sendDocument(msg.message.chat.id, "./media/summerSports.pdf");
+};
 
-const sport_2 = async (msg) => {};
+const sport_2 = async (msg) => {
+  await bot.sendDocument(msg.message.chat.id, "./media/winterSports.pdf");
+};
 
-const sport_3 = async (msg) => {};
+const sport_3 = async (msg) => {
+  await bot.sendDocument(msg.message.chat.id, "./media/tourist.pdf");
+};
 
-const creation_1 = async (msg) => {};
+const creation_1 = async (msg) => {
+  await bot.sendDocument(msg.message.chat.id, "./media/kvn.pdf");
+};
 
-const creation_2 = async (msg) => {};
+const creation_2 = async (msg) => {
+  await bot.sendDocument(msg.message.chat.id, "./media/dawns.pdf");
+};
 
 const router = async (msg) => {
   switch (msg.data) {
@@ -233,5 +267,6 @@ const router = async (msg) => {
 };
 
 module.exports = {
+  mainStep,
   router,
 };

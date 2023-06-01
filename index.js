@@ -7,25 +7,30 @@ const {
   ageStep,
   departmentStep,
 } = require("./steps/sign-up");
-const { mainStep, allAboutGTEStep, router } = require("./steps/main");
+const { router } = require("./steps/main");
 const { unknown } = require("./steps/common");
+const { messages } = require("./messages");
+const { mainButtons } = require("./buttons");
 
 const token = "5829342069:AAHS2FCuHY3ucm63Y_GEKJs2ll9hosg21Mo";
 
 global.bot = new TelegramApi(token, { polling: true });
 
 global.steps = {};
-global.users = {
-  418259847: {
-    first_name: "Никита",
-    last_name: "Колташов",
-    username: "leroyJS",
-  },
-};
+global.users = {};
 
 const checkUser = (chatId) => {
   if (users[chatId]) {
-    steps[chatId] = "main";
+    const hasUsername = users[chatId]?.username;
+    const hasFirstName = users[chatId]?.first_name;
+    const hasLastName = users[chatId]?.last_name;
+    const hasDepartment = users[chatId]?.department;
+    const hasHobbies = users[chatId]?.hobbies;
+    const hasAge = users[chatId]?.age;
+
+    if (hasUsername && hasFirstName && hasLastName && hasDepartment && hasHobbies && hasAge) {
+      steps[chatId] = "main";
+    }
   } else {
     steps[chatId] = undefined;
   }
@@ -37,12 +42,13 @@ bot.on("message", async (msg) => {
 
   checkUser(chatId);
 
-  if (text === "/start") {
+  if (text === "/start" && steps[chatId] === undefined) {
     startStep(msg);
 
     return;
   }
 
+  console.log(chatId, steps[chatId], users[msg.chat.id]);
   switch (steps[chatId]) {
     case "first_name":
       await firstNameStep(msg);
@@ -61,7 +67,7 @@ bot.on("message", async (msg) => {
 
       break;
     case "main":
-      await mainStep(msg);
+      await bot.sendMessage(msg.chat.id, messages.main(), mainButtons);
       break;
 
     default:
