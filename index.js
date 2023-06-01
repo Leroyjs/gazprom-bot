@@ -67,7 +67,8 @@ bot.on("message", async (msg) => {
 
       break;
     case "main":
-      await bot.sendMessage(msg.chat.id, messages.main(), mainButtons);
+      // await bot.sendMessage(msg.chat.id, messages.main(), mainButtons);
+      await router(msg);
       break;
 
     default:
@@ -85,9 +86,6 @@ bot.on("callback_query", async (msg) => {
   switch (steps[chatId]) {
     case "department":
       departmentStep(msg);
-      break;
-    case "main":
-      router(msg);
       break;
   }
 });

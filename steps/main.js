@@ -12,252 +12,252 @@ const {
 const { messages } = require("../messages");
 
 const mainStep = async (msg) => {
-  await bot.sendMessage(msg.message.chat.id, messages.main(), mainButtons);
+  await bot.sendMessage(msg.chat.id, messages.main(), mainButtons);
 };
 
 const yourStartStep = async (msg) => {
-  await bot.sendMessage(msg.message.chat.id, messages.yourStart(), yourStartButtons);
+  await bot.sendMessage(msg.chat.id, messages.yourStart(), yourStartButtons);
 };
 
 const allAboutGTEStep = async (msg) => {
-  await bot.sendMessage(msg.message.chat.id, messages.allAboutGTE(), allAboutGTEButtons);
+  await bot.sendMessage(msg.chat.id, messages.allAboutGTE(), allAboutGTEButtons);
 };
 
 const possibilitiesStep = async (msg) => {
-  await bot.sendMessage(msg.message.chat.id, messages.possibilities(), possibilitiesButtons);
+  await bot.sendMessage(msg.chat.id, messages.possibilities(), possibilitiesButtons);
 };
 
 const usefulStep = async (msg) => {
-  await bot.sendMessage(msg.message.chat.id, messages.useful(), usefulButtons);
+  await bot.sendMessage(msg.chat.id, messages.useful(), usefulButtons);
 };
 
 const contactsStep = async (msg) => {
-  await bot.sendMessage(msg.message.chat.id, messages.contacts(), contactsButtons);
+  await bot.sendMessage(msg.chat.id, messages.contacts(), contactsButtons);
 };
 
 const scienceStep = async (msg) => {
-  await bot.sendMessage(msg.message.chat.id, messages.science(), scienceButtons);
+  await bot.sendMessage(msg.chat.id, messages.science(), scienceButtons);
 };
 
 const sportStep = async (msg) => {
-  await bot.sendMessage(msg.message.chat.id, messages.sport(), sportButtons);
+  await bot.sendMessage(msg.chat.id, messages.sport(), sportButtons);
 };
 
 const creationStep = async (msg) => {
-  await bot.sendMessage(msg.message.chat.id, messages.creation(), creationButtons);
+  await bot.sendMessage(msg.chat.id, messages.creation(), creationButtons);
 };
 
 const main_1 = async (msg) => {
-  await bot.sendMessage(msg.message.chat.id, "TODO, Соня жду тебя");
+  await bot.sendMessage(msg.chat.id, "TODO, Соня жду тебя");
 };
 
 const main_2 = async (msg) => {
-  await bot.sendMessage(msg.message.chat.id, "TODO, Соня жду тебя");
+  await bot.sendMessage(msg.chat.id, "TODO, Соня жду тебя");
 };
 
 const main_3 = async (msg) => {
   await bot.sendMessage(
-    msg.message.chat.id,
+    msg.chat.id,
     "Переходи сюда\nhttps://forms.yandex.ru/u/6478b6f590fa7b0eabaabfe4/"
   );
 };
 
 const yourStart_1 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/oneStart.jpg");
+  await bot.sendDocument(msg.chat.id, "./media/oneStart.jpg");
 };
 
 const yourStart_2 = async (msg) => {
   await bot.sendMessage(
-    msg.message.chat.id,
+    msg.chat.id,
     "🔹Заполни на корпоративном портале Общества «Анкету для дистанционного обучения в СНФПО-онлайн» в разделе «Филиалы — Учебно-производственный центр — Анкеты — Анкета для дистанционного обучения в СНФПО-онлайн»\n\n🔸Обрати внимание, что на указанную в анкете электронную почту будет направлено письмо с ссылкой для завершения регистрации на платформе.\n\n🔹После завершения регистрации для тебя откроется доступ в личный кабинет обучающегося и к учебным материалам адаптационного курса.\n\n🔸Скачивай приложение на телефон и развивайся\nhttps://sdo.snfpo.ru/go/index.html"
   );
 };
 
 const allAboutGTE_1 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/info.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/info.pdf");
 };
 
 const allAboutGTE_2 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/admin.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/admin.pdf");
 };
 
 const allAboutGTE_3 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/branch.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/branch.pdf");
 };
 
 const allAboutGTE_4 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/SMUS.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/SMUS.pdf");
 };
 
 const allAboutGTE_5 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/tradeUnion.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/tradeUnion.pdf");
 };
 
 const useful_1 = async (msg) => {
   await bot.sendMessage(
-    msg.message.chat.id,
+    msg.chat.id,
     "🔹Новости СМУС - @smusgte\n\n🔸Главные новости ГТЕ - @gazpromtransgazekaterinburg\n\n🔹 Все что происходит в ГТЕ с профсоюзом - @gte_oppo\n\n🔸Творческие инициативы ПАО «Газпром» - @gazpromfakel\n\n🔹Официальный канал ПАО «Газпром» - @gazprom\n\n🔸Ведущий канал про нефтегазовую отрасль - @papagaz\n\n🔹Приложение ГИД объединяет работник по всей России -  https://apps.apple.com/ru/app/%D0%B3%D0%B8%D0%B4/id1596056366"
   );
-  await bot.sendDocument(msg.message.chat.id, "./media/socialLinks.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/socialLinks.pdf");
 };
 
 const useful_2 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/kolD.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/kolD.pdf");
 };
 
 const contacts_1 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/conactSMUS.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/conactSMUS.pdf");
 };
 
 const contacts_2 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/conactMKF.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/conactMKF.pdf");
 };
 
 const science_1 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/NTK.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/NTK.pdf");
 };
 
 const science_2 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/innovation.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/innovation.pdf");
 };
 
 const science_3 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/infest.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/infest.pdf");
 };
 
 const science_4 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/SPRMS.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/SPRMS.pdf");
 };
 
 const science_5 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/SRK.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/SRK.pdf");
 };
 
 const science_6 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/LMR.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/LMR.pdf");
 };
 
 const sport_1 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/summerSports.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/summerSports.pdf");
 };
 
 const sport_2 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/winterSports.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/winterSports.pdf");
 };
 
 const sport_3 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/tourist.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/tourist.pdf");
 };
 
 const creation_1 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/kvn.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/kvn.pdf");
 };
 
 const creation_2 = async (msg) => {
-  await bot.sendDocument(msg.message.chat.id, "./media/dawns.pdf");
+  await bot.sendDocument(msg.chat.id, "./media/dawns.pdf");
 };
 
 const router = async (msg) => {
-  switch (msg.data) {
-    case "your-start":
+  switch (msg.text) {
+    case "Твой старт":
       yourStartStep(msg);
       break;
 
-    case "all-about-gte":
+    case "Все о ГТЕ":
       allAboutGTEStep(msg);
       break;
-    case "possibilities":
+    case "Возможности":
       possibilitiesStep(msg);
       break;
-    case "useful":
+    case "Полезно":
       usefulStep(msg);
       break;
 
-    case "contacts":
+    case "Контактные данные":
       contactsStep(msg);
       break;
-    case "science":
+    case "Наука":
       scienceStep(msg);
       break;
-    case "sport":
+    case "Спорт":
       sportStep(msg);
       break;
-    case "creation":
+    case "Творчество":
       creationStep(msg);
       break;
-    case "main_1":
+    case "График мероприятий":
       main_1(msg);
       break;
-    case "main_2":
+    case "Вопрос ответ":
       main_2(msg);
       break;
-    case "main_3":
+    case "Есть идея или вопрос":
       main_3(msg);
       break;
-    case "yourStart_1":
+    case "Первые действия":
       yourStart_1(msg);
       break;
-    case "yourStart_2":
+    case "Курс новичка":
       yourStart_2(msg);
       break;
-    case "allAboutGTE_1":
+    case "Общая информация":
       allAboutGTE_1(msg);
       break;
-    case "allAboutGTE_2":
+    case "Администрация":
       allAboutGTE_2(msg);
       break;
-    case "allAboutGTE_3":
+    case "Филиалы":
       allAboutGTE_3(msg);
       break;
-    case "allAboutGTE_4":
+    case "СМУС":
       allAboutGTE_4(msg);
       break;
-    case "allAboutGTE_5":
+    case "ПРОФСОЮЗ":
       allAboutGTE_5(msg);
       break;
-    case "useful_1":
+    case "Социальные сети":
       useful_1(msg);
       break;
-    case "useful_2":
+    case "Плюшки":
       useful_2(msg);
       break;
-    case "contacts_1":
+    case "СМУС":
       contacts_1(msg);
       break;
-    case "contacts_2":
+    case "Филиалы":
       contacts_2(msg);
       break;
-    case "science_1":
+    case "НТК":
       science_1(msg);
       break;
-    case "science_2":
+    case "Рацухи":
       science_2(msg);
       break;
-    case "science_3":
+    case "Рац фест":
       science_3(msg);
       break;
-    case "science_4":
+    case "ШПРМС":
       science_4(msg);
       break;
-    case "science_5":
+    case "ШРК":
       science_5(msg);
       break;
-    case "science_6":
+    case "Лучший МР":
       science_6(msg);
       break;
-    case "sport_1":
+    case "Спартакиада летняя":
       sport_1(msg);
       break;
-    case "sport_2":
+    case "Спартакиада зимняя":
       sport_2(msg);
       break;
-    case "sport_3":
+    case "Тур слет":
       sport_3(msg);
       break;
-    case "creation_1":
+    case "КВН":
       creation_1(msg);
       break;
-    case "creation_2":
+    case "Зори":
       creation_2(msg);
       break;
 

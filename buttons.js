@@ -137,7 +137,7 @@ const departmentButtons = {
 
 const mainButtons = {
   reply_markup: JSON.stringify({
-    inline_keyboard: [
+    keyboard: [
       [
         {
           text: "Твой старт",
@@ -188,7 +188,7 @@ const mainButtons = {
 
 const yourStartButtons = {
   reply_markup: JSON.stringify({
-    inline_keyboard: [
+    keyboard: [
       [
         {
           text: "Первые действия",
@@ -197,13 +197,13 @@ const yourStartButtons = {
       ],
       [
         {
-          text: "Администрация",
+          text: "Курс новичка",
           callback_data: "yourStart_2",
         },
       ],
       [
         {
-          text: "Назад",
+          text: "НАЗАД",
           callback_data: "main",
         },
       ],
@@ -213,7 +213,7 @@ const yourStartButtons = {
 
 const allAboutGTEButtons = {
   reply_markup: JSON.stringify({
-    inline_keyboard: [
+    keyboard: [
       [
         {
           text: "Общая информация",
@@ -246,7 +246,7 @@ const allAboutGTEButtons = {
       ],
       [
         {
-          text: "Назад",
+          text: "НАЗАД",
           callback_data: "main",
         },
       ],
@@ -256,14 +256,12 @@ const allAboutGTEButtons = {
 
 const possibilitiesButtons = {
   reply_markup: JSON.stringify({
-    inline_keyboard: [
+    keyboard: [
       [
         {
           text: "Наука",
           callback_data: "science",
         },
-      ],
-      [
         {
           text: "Спорт",
           callback_data: "sport",
@@ -277,7 +275,7 @@ const possibilitiesButtons = {
       ],
       [
         {
-          text: "Назад",
+          text: "НАЗАД",
           callback_data: "main",
         },
       ],
@@ -287,14 +285,12 @@ const possibilitiesButtons = {
 
 const usefulButtons = {
   reply_markup: JSON.stringify({
-    inline_keyboard: [
+    keyboard: [
       [
         {
           text: "Контактные данные",
           callback_data: "contacts",
         },
-      ],
-      [
         {
           text: "Социальные сети",
           callback_data: "useful_1",
@@ -308,7 +304,7 @@ const usefulButtons = {
       ],
       [
         {
-          text: "Назад",
+          text: "НАЗАД",
           callback_data: "main",
         },
       ],
@@ -318,14 +314,12 @@ const usefulButtons = {
 //3 lvl
 const contactsButtons = {
   reply_markup: JSON.stringify({
-    inline_keyboard: [
+    keyboard: [
       [
         {
           text: "СМУС",
           callback_data: "contacts_1",
         },
-      ],
-      [
         {
           text: "Филиалы",
           callback_data: "contacts_2",
@@ -333,7 +327,7 @@ const contactsButtons = {
       ],
       [
         {
-          text: "Назад",
+          text: "НАЗАД",
           callback_data: "useful",
         },
       ],
@@ -343,7 +337,7 @@ const contactsButtons = {
 
 const scienceButtons = {
   reply_markup: JSON.stringify({
-    inline_keyboard: [
+    keyboard: [
       [
         {
           text: "НТК",
@@ -382,7 +376,7 @@ const scienceButtons = {
       ],
       [
         {
-          text: "Назад",
+          text: "НАЗАД",
           callback_data: "possibilities",
         },
       ],
@@ -392,7 +386,7 @@ const scienceButtons = {
 
 const sportButtons = {
   reply_markup: JSON.stringify({
-    inline_keyboard: [
+    keyboard: [
       [
         {
           text: "Спартакиада летняя",
@@ -413,7 +407,7 @@ const sportButtons = {
       ],
       [
         {
-          text: "Назад",
+          text: "НАЗАД",
           callback_data: "possibilities",
         },
       ],
@@ -423,7 +417,7 @@ const sportButtons = {
 
 const creationButtons = {
   reply_markup: JSON.stringify({
-    inline_keyboard: [
+    keyboard: [
       [
         {
           text: "КВН",
@@ -438,7 +432,7 @@ const creationButtons = {
       ],
       [
         {
-          text: "Назад",
+          text: "НАЗАД",
           callback_data: "possibilities",
         },
       ],
