@@ -9,15 +9,27 @@ const {
 } = require("./steps/sign-up");
 const { router } = require("./steps/main");
 const { unknown } = require("./steps/common");
-const { messages } = require("./messages");
-const { mainButtons } = require("./buttons");
+const fs = require("fs");
+require("dotenv").config();
 
-const token = "5829342069:AAHS2FCuHY3ucm63Y_GEKJs2ll9hosg21Mo";
-
+const token = process.env.TELEGRAM_TOKEN;
+console.log("token", token);
 global.bot = new TelegramApi(token, { polling: true });
 
 global.steps = {};
-global.users = {};
+
+fs.readFile("./users.json", "utf8", (err, data) => {
+  if (err) throw err;
+
+  global.users = JSON.parse(data);
+});
+
+const signUpUser = async () => {
+  fs.writeFile("./users.json", JSON.stringify(global.users), (err) => {
+    if (err) throw err;
+    console.log("signUp");
+  });
+};
 
 const checkUser = (chatId) => {
   if (users[chatId]) {
@@ -48,7 +60,6 @@ bot.on("message", async (msg) => {
     return;
   }
 
-  console.log(chatId, steps[chatId], users[msg.chat.id]);
   switch (steps[chatId]) {
     case "first_name":
       await firstNameStep(msg);
@@ -64,18 +75,16 @@ bot.on("message", async (msg) => {
       break;
     case "age":
       await ageStep(msg);
+      await signUpUser();
 
       break;
     case "main":
-      // await bot.sendMessage(msg.chat.id, messages.main(), mainButtons);
       await router(msg);
       break;
 
     default:
       unknown(msg);
   }
-
-  // console.log(msg);
 });
 
 bot.on("callback_query", async (msg) => {

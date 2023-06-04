@@ -317,11 +317,11 @@ const contactsButtons = {
     keyboard: [
       [
         {
-          text: "СМУС",
+          text: "СМУС😇",
           callback_data: "contacts_1",
         },
         {
-          text: "Филиалы",
+          text: "Филиалы🏘️",
           callback_data: "contacts_2",
         },
       ],
@@ -401,7 +401,7 @@ const sportButtons = {
       ],
       [
         {
-          text: "Тур слет",
+          text: "Турслет",
           callback_data: "sport_3",
         },
       ],

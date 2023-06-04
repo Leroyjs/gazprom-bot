@@ -1,7 +1,26 @@
 {
-  "4182598471": {
-    "first_name": "Никита",
-    "last_name": "Колташов",
-    "username": "leroyJS"
+  "418259847": {
+    "username": "leroyJS",
+    "first_name": "Жока",
+    "last_name": "Жокинидзе",
+    "department": "department_23",
+    "hobbies": "Пить пиво",
+    "age": "12"
+  },
+  "418259841": {
+    "username": "leroyJS1",
+    "first_name": "Бока",
+    "last_name": "Бокинидзе",
+    "department": "department_21",
+    "hobbies": "Бархатные тяги",
+    "age": "34"
+  },
+  "418259842": {
+    "username": "leroyJS2",
+    "first_name": "аувмваи2",
+    "last_name": "укпук2",
+    "department": "department_22",
+    "hobbies": "вамвам",
+    "age": "32"
   }
 }

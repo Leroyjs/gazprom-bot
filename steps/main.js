@@ -221,10 +221,10 @@ const router = async (msg) => {
     case "Плюшки":
       useful_2(msg);
       break;
-    case "СМУС":
+    case "СМУС😇":
       contacts_1(msg);
       break;
-    case "Филиалы":
+    case "Филиалы🏘️":
       contacts_2(msg);
       break;
     case "НТК":
