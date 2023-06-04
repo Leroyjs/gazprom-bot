@@ -1,3 +1,4 @@
 node_modules
 users.xlsx
 .env
+.DS_Store
